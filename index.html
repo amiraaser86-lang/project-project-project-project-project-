@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>منيو مطعم في زرار اضافه ا — مطعم</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/restaurant.css">
+</head>
+<body>
+<nav>
+  <div class="nav-logo">🍽️ منيو مطعم في زرار اضافه ا</div>
+  <ul class="nav-links">
+    <li><a href="#home">الرئيسية</a></li>
+    <li><a href="#menu">القائمة</a></li>
+    <li><a href="#about">عن المطعم</a></li>
+    <li><a href="#gallery">الصور</a></li>
+    <li><a href="#contact">تواصل</a></li>
+  </ul>
+  <button class="btn btn-primary" onclick="openReservation()">احجز طاولة</button>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="badge">🌟 الأفضل في المدينة منذ 2015</div>
+    <h1>تجربة طعام <span>لا تُنسى</span></h1>
+    <p>نقدم لك أشهى المأكولات العربية والعالمية المطهوة بأيدي أمهر الطهاة باستخدام أطازج المكونات.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
+      <a href="#menu" class="btn btn-primary">🍴 تصفح القائمة</a>
+      <a href="#contact" class="btn btn-outline">📍 الموقع والأوقات</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stat"><strong>+15,000</strong><span>عميل سعيد</span></div>
+  <div class="stat"><strong>85+</strong><span>طبق على القائمة</span></div>
+  <div class="stat"><strong>10</strong><span>سنوات خبرة</span></div>
+  <div class="stat"><strong>⭐ 4.9</strong><span>تقييم على Google</span></div>
+</section>
+
+<section id="menu">
+  <div class="section-title">
+    <h2>قائمة <span>الطعام</span></h2>
+    <p>اختر من بين مجموعتنا الواسعة من الأطباق الشهية</p>
+  </div>
+  <div class="menu-tabs" id="menuTabs"></div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="about-grid">
+    <div class="about-img">
+      <img src="https://picsum.photos/seed/restaurant/600/450" alt="منيو مطعم في زرار اضافه ا" loading="lazy">
+    </div>
+    <div class="about-text">
+      <div class="section-title" style="text-align:right">
+        <h2>قصتنا مع <span>الطعام</span></h2>
+      </div>
+      <p>بدأت رحلتنا عام 2015 بحلم بسيط: تقديم أفضل تجربة طعام في المدينة. اليوم، بات منيو مطعم في زرار اضافه ا وجهة لكل من يبحث عن أجواء دافئة وطعام أصيل مصنوع بحب.</p>
+      <p style="margin-top:1rem;color:var(--muted)">طاقمنا من الطهاة المحترفين يختار المكونات الطازجة يومياً، ونؤمن أن الطعام الجيد يجمع الناس.</p>
+      <div class="features-row">
+        <div class="feature-item"><span>✓</span> مكونات طازجة يومياً</div>
+        <div class="feature-item"><span>✓</span> خيارات نباتية متاحة</div>
+        <div class="feature-item"><span>✓</span> توصيل مجاني للمنطقة</div>
+        <div class="feature-item"><span>✓</span> حفلات وتجمعات خاصة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:var(--surface)">
+  <div class="section-title">
+    <h2>معرض <span>الصور</span></h2>
+  </div>
+  <div class="gallery-grid">
+    <img src="https://picsum.photos/seed/food1/400/300" alt="food 1" loading="lazy"><img src="https://picsum.photos/seed/food2/400/300" alt="food 2" loading="lazy"><img src="https://picsum.photos/seed/food3/400/300" alt="food 3" loading="lazy"><img src="https://picsum.photos/seed/food4/400/300" alt="food 4" loading="lazy"><img src="https://picsum.photos/seed/food5/400/300" alt="food 5" loading="lazy"><img src="https://picsum.photos/seed/food6/400/300" alt="food 6" loading="lazy">
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-title">
+    <h2>تواصل <span>معنا</span></h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="info-card"><span class="icon">📍</span><div><strong>العنوان</strong><p>شارع الملك فهد، الرياض</p></div></div>
+      <div class="info-card"><span class="icon">⏰</span><div><strong>أوقات العمل</strong><p>السبت–الخميس: 12م–12ص<br>الجمعة: 2م–1ص</p></div></div>
+      <div class="info-card"><span class="icon">📞</span><div><strong>اتصل بنا</strong><p>+966 50 000 0000</p></div></div>
+    </div>
+    <form class="contact-form" onsubmit="handleReservation(event)">
+      <h3>احجز طاولتك</h3>
+      <input type="text" placeholder="اسمك الكريم" required>
+      <input type="tel" placeholder="رقم الجوال">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+        <input type="date">
+        <input type="time">
+      </div>
+      <select><option>2 أشخاص</option><option>4 أشخاص</option><option>6 أشخاص</option><option>+6</option></select>
+      <button type="submit" class="btn btn-primary" style="width:100%">تأكيد الحجز ✓</button>
+    </form>
+  </div>
+</section>
+
+<div class="modal" id="reservationModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeReservation()">✕</button>
+    <h2 style="color:var(--accent)">🎉 تم الحجز بنجاح!</h2>
+    <p>سنتواصل معك قريباً لتأكيد الحجز.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 منيو مطعم في زرار اضافه ا · صُنع بـ ⚡ Trend AI Builder</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>
